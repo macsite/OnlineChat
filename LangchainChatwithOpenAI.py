@@ -21,9 +21,9 @@ prompt = ChatPromptTemplate.from_messages(
 
 # streamlit
 st.title("Langchain Chat with OpenAI")
-input_text = st.text_input("Opisz swojego zwierzaka, a ja napiszę o nim wierszyk.","""imie: Bajtek
-gatunek: pies
-rasa: mieszaniec
+input_text = st.text_input("Opisz swojego zwierzaka, a ja napiszę o nim wierszyk.","""imie: Bajtek\n
+gatunek: pies\n
+rasa: mieszaniec\n
 charakterystyka: szybki, kochany, przywiązany, oddany, lubi patyki i spacery, lubi mięsko i wino""")
 
 # OpenAI LLM
