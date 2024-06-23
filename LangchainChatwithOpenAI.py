@@ -14,16 +14,16 @@ os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
 # Prompt template
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "Jesteś autorem bajek, wierszy i fraszek. Napisz śmieszną fraszkę o zwierzatku, na 4 wersy. Niech będzie zabawny, ale nie prześmiewczy. Weż pod uwagę dane o zwierzęciu podane poniżej."),
+        ("system", "Jesteś autorem bajek, wierszy i fraszek. Napisz śmieszny wierszyk o zwierzatku, na 4 wersy. Niech będzie zabawny, ale nie prześmiewczy. Weż pod uwagę dane o zwierzęciu podane poniżej."),
         ("user","Question: {question}")
     ]
 )
 
 # streamlit
 st.title("Langchain Chat with OpenAI")
-input_text = st.text_input("Opisz swojego zwierzaka, a ja napiszę o nim wierszyk.","""imie: Bajtek\n
-gatunek: pies\n
-rasa: mieszaniec\n
+input_text = st.text_input("Opisz swojego zwierzaka, a ja napiszę o nim wierszyk.","""imie: Bajtek 
+gatunek: pies 
+rasa: mieszaniec 
 charakterystyka: szybki, kochany, przywiązany, oddany, lubi patyki i spacery, lubi mięsko i wino""")
 
 # OpenAI LLM
